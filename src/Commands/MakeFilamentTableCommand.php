@@ -2,7 +2,10 @@
 
 namespace Burdziakm\FilamentGenerators\Commands;
 
-class MakeFilamentTableCommand
+use Illuminate\Console\GeneratorCommand;
+use Illuminate\Support\Str;
+
+class MakeFilamentTableCommand extends GeneratorCommand
 {
     protected $name = 'make:filament-table';
 
@@ -18,5 +21,11 @@ class MakeFilamentTableCommand
     protected function getDefaultNamespace($rootNamespace)
     {
         return $rootNamespace . '\\Filament\\Tables';
+    }
+
+    protected function getNameInput()
+    {
+        $name = trim($this->argument('name'));
+        return Str::plural($name) . 'Table';
     }
 }

@@ -21,4 +21,9 @@ class MakeFilamentFormCommand extends GeneratorCommand
     {
         return $rootNamespace . '\\Filament\\Forms';
     }
+    
+    protected function getNameInput()
+    {
+        return trim($this->argument('name')) . 'Form';
+    }
 }
