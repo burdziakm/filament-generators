@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Filament\Forms\Form;
+
+class {{ class }}
+{
+    public function build(Form $form): Form
+    {
+        return $form->schema([
+            //
+        ]);
+    }
+}

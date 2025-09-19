@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Filament\Tables\Table;
+
+class {{ class }}
+{
+    public function build(Table $table): Table
+    {
+        return $table->columns([
+            //
+        ]);
+    }
+}
